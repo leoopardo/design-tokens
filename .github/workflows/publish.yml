@@ -98,7 +98,7 @@ jobs:
           const repo = process.env.GITHUB_REPOSITORY;
           const runId = process.env.GITHUB_RUN_ID;
           const sha = (process.env.GITHUB_SHA || '').slice(0, 7);
-          const packageUrl = `https://github.com/${repo}/pkgs/npm/${encodeURIComponent(pkgName)}`;
+          const packageUrl = `https://github.com/${repo}/pkgs/npm/${pkgName}}`;
           const runUrl = `https://github.com/${repo}/actions/runs/${runId}`;
 
           const payload = {
