@@ -92,7 +92,7 @@ jobs:
             return;
           }
 
-          const custom = process.env.SLACK_CUSTOM_MESSAGE || 'Novo pacote publicado com sucesso.';
+          const custom = 'Nova versão de design-tokens publicada 🚀. Lembrem-se de manter os projetos atualizados!';
           const pkgName = process.env.PACKAGE_NAME;
           const pkgVersion = process.env.PACKAGE_VERSION;
           const repo = process.env.GITHUB_REPOSITORY;
