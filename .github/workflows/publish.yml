@@ -1,10 +1,11 @@
 name: Publish Package
 
 on:
-  workflow_dispatch:
-  release:
+  workflow_run:
+    workflows:
+      - Build Tokens
     types:
-      - published
+      - completed
 
 permissions:
   contents: read
@@ -12,11 +13,14 @@ permissions:
 
 jobs:
   publish:
+    if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main' }}
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
 
       - name: Setup Node for GitHub Packages
         uses: actions/setup-node@v4
@@ -25,15 +29,21 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           cache: npm
 
-      - name: Validate package name scope
+      - name: Ensure scoped package name
+        env:
+          REPO_OWNER: ${{ github.repository_owner }}
         run: |
-          node -e "const fs = require('fs'); const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8')); if (!pkg.name.startsWith('@')) { throw new Error('Para publicar no GitHub Packages, use nome escopado em package.json, ex: @SEU_ORG/design-tokens'); }"
+          node -e "const fs=require('fs'); const owner=(process.env.REPO_OWNER||'').toLowerCase(); const pkg=JSON.parse(fs.readFileSync('package.json','utf8')); const current=pkg.name; if (!current.startsWith('@')) { pkg.name=`@${owner}/${current}`; fs.writeFileSync('package.json', JSON.stringify(pkg,null,2)+'\n'); console.log(`Adjusted package name: ${current} -> ${pkg.name}`); } else { console.log(`Package name already scoped: ${current}`); }"
 
       - name: Install dependencies
         run: npm ci
 
       - name: Build package
         run: npm run build
+
+      - name: Set unique CI version
+        run: |
+          node -e "const fs = require('fs'); const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8')); const base = pkg.version.split('-')[0]; pkg.version = `${base}-main.${process.env.GITHUB_RUN_NUMBER}`; fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2) + '\n'); console.log(`Publishing version ${pkg.version}`);"
 
       - name: Publish
         run: npm publish
