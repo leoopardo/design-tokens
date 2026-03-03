@@ -41,6 +41,13 @@ npm install @leoopardo/design-tokens
 yarn add @leoopardo/design-tokens
 ```
 
+## Envs
+
+```bash
+SLACK_CUSTOM_MESSAGE=
+SLACK_WEBHOOK_URL=
+```
+
 ## CI
 
 - `Normalize Tokens` (`.github/workflows/normalize-main.yml`): roda em cada push na `main`, executa `npm run normalize` e faz commit automático se houver mudança.
