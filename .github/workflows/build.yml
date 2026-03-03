@@ -1,9 +1,11 @@
 name: Build Tokens
 
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows:
+      - Normalize Tokens
+    types:
+      - completed
 
 permissions:
   contents: read
@@ -14,12 +16,14 @@ concurrency:
 
 jobs:
   build:
-    if: "${{ contains(github.event.head_commit.message, 'chore(tokens): normalize') }}"
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Setup Node
         uses: actions/setup-node@v4
