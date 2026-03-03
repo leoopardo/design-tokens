@@ -1,19 +1,25 @@
-import StyleDictionary from "style-dictionary";
+import StyleDictionary from 'style-dictionary';
 
-const buildTheme = async (theme) => {
+const themes = ['light', 'dark'];
+
+async function buildTheme(theme) {
   const sd = new StyleDictionary({
+    log: {
+      verbosity: 'verbose'
+    },
     source: [
-      "tokens/global.json",
-      `tokens/${theme}.json`
+      'tokens-normalized/core.json',
+      `tokens-normalized/${theme}.json`,
+      'tokens-normalized/components.json'
     ],
     platforms: {
       js: {
-        transformGroup: "js",
+        transformGroup: 'js',
         buildPath: `dist/${theme}/`,
         files: [
           {
-            destination: "index.js",
-            format: "javascript/es6"
+            destination: 'index.js',
+            format: 'javascript/es6'
           }
         ]
       }
@@ -21,9 +27,6 @@ const buildTheme = async (theme) => {
   });
 
   await sd.buildAllPlatforms();
-};
+}
 
-await Promise.all([
-  buildTheme("light"),
-  buildTheme("dark")
-]);
+await Promise.all(themes.map(buildTheme));
