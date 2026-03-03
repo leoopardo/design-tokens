@@ -33,7 +33,20 @@ jobs:
         env:
           REPO_OWNER: ${{ github.repository_owner }}
         run: |
-          node -e "const fs=require('fs'); const owner=(process.env.REPO_OWNER||'').toLowerCase(); const pkg=JSON.parse(fs.readFileSync('package.json','utf8')); const current=pkg.name; if (!current.startsWith('@')) { pkg.name=`@${owner}/${current}`; fs.writeFileSync('package.json', JSON.stringify(pkg,null,2)+'\n'); console.log(`Adjusted package name: ${current} -> ${pkg.name}`); } else { console.log(`Package name already scoped: ${current}`); }"
+          node <<'NODE'
+          const fs = require('fs');
+          const owner = (process.env.REPO_OWNER || '').toLowerCase();
+          const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+          const current = pkg.name;
+
+          if (!current.startsWith('@')) {
+            pkg.name = `@${owner}/${current}`;
+            fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2) + '\n');
+            console.log(`Adjusted package name: ${current} -> ${pkg.name}`);
+          } else {
+            console.log(`Package name already scoped: ${current}`);
+          }
+          NODE
 
       - name: Install dependencies
         run: npm ci
@@ -43,7 +56,14 @@ jobs:
 
       - name: Set unique CI version
         run: |
-          node -e "const fs = require('fs'); const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8')); const base = pkg.version.split('-')[0]; pkg.version = `${base}-main.${process.env.GITHUB_RUN_NUMBER}`; fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2) + '\n'); console.log(`Publishing version ${pkg.version}`);"
+          node <<'NODE'
+          const fs = require('fs');
+          const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+          const base = pkg.version.split('-')[0];
+          pkg.version = `${base}-main.${process.env.GITHUB_RUN_NUMBER}`;
+          fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2) + '\n');
+          console.log(`Publishing version ${pkg.version}`);
+          NODE
 
       - name: Publish
         run: npm publish
