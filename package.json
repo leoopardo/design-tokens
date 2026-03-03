@@ -3,6 +3,24 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./light": {
+      "types": "./dist/light/index.d.ts",
+      "import": "./dist/light/index.js"
+    },
+    "./dark": {
+      "types": "./dist/dark/index.d.ts",
+      "import": "./dist/dark/index.js"
+    }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "files": ["dist"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +30,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "dependencies": {
     "style-dictionary": "^5.3.3"
   }

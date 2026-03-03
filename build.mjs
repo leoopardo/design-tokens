@@ -1,4 +1,5 @@
 import StyleDictionary from 'style-dictionary';
+import fs from 'node:fs';
 import jsObjectFormatters from './style-dictionary/formats/js-object.js';
 
 const { jsObjectFormatter } = jsObjectFormatters;
@@ -35,3 +36,25 @@ async function buildTheme(theme) {
 }
 
 await Promise.all(themes.map(buildTheme));
+
+const packageIndexJs = `import light from './light/index.js';
+import dark from './dark/index.js';
+
+export { light, dark };
+export default { light, dark };
+`;
+
+const packageIndexDts = `import light from './light/index.js';
+import dark from './dark/index.js';
+
+declare const themes: {
+  light: typeof light;
+  dark: typeof dark;
+};
+
+export { light, dark };
+export default themes;
+`;
+
+fs.writeFileSync('dist/index.js', packageIndexJs);
+fs.writeFileSync('dist/index.d.ts', packageIndexDts);
