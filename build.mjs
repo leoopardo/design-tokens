@@ -1,16 +1,21 @@
 import StyleDictionary from 'style-dictionary';
+import jsObjectFormatters from './style-dictionary/formats/js-object.js';
+
+const { jsObjectFormatter } = jsObjectFormatters;
+
+StyleDictionary.registerFormat({
+  name: 'js/object',
+  format: jsObjectFormatter,
+});
 
 const themes = ['light', 'dark'];
 
 async function buildTheme(theme) {
   const sd = new StyleDictionary({
-    log: {
-      verbosity: 'verbose'
-    },
     source: [
       'tokens-normalized/core.json',
       `tokens-normalized/${theme}.json`,
-      'tokens-normalized/components.json'
+      'tokens-normalized/components.json',
     ],
     platforms: {
       js: {
@@ -19,11 +24,11 @@ async function buildTheme(theme) {
         files: [
           {
             destination: 'index.js',
-            format: 'javascript/es6'
-          }
-        ]
-      }
-    }
+            format: 'js/object',
+          },
+        ],
+      },
+    },
   });
 
   await sd.buildAllPlatforms();

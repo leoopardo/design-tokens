@@ -1,251 +1,320 @@
-/**
- * Do not edit directly, this file was auto-generated.
- */
-
-export const DimensionScale = "2rem";
-export const DimensionXs = "4rem";
-export const DimensionSm = "4rem * 2rem";
-export const DimensionMd = "4rem * 2rem * 2rem";
-export const DimensionLg = "4rem * 2rem * 2rem * 2rem";
-export const DimensionXl = "4rem * 2rem * 2rem * 2rem * 2rem";
-export const SpacingXs = "4rem";
-export const SpacingSm = "4rem * 2rem";
-export const SpacingMd = "4rem * 2rem * 2rem";
-export const SpacingLg = "4rem * 2rem * 2rem * 2rem";
-export const SpacingXl = "4rem * 2rem * 2rem * 2rem * 2rem";
-export const SpacingMultiValue = "4rem * 2rem 4rem * 2rem * 2rem * 2rem * 2rem"; // You can have multiple values in a single spacing token. Read more on these: https://docs.tokens.studio/available-tokens/spacing-tokens#multi-value-spacing-tokens
-export const BorderRadiusSm = "4";
-export const BorderRadiusLg = "8";
-export const BorderRadiusXl = "16";
-export const BorderRadiusMultiValue = "4 8"; // You can have multiple values in a single radius token. Read more on these: https://docs.tokens.studio/available-tokens/border-radius-tokens#single--multiple-values
-export const ColorsBlack = "#000000";
-export const ColorsWhite = "#fbfbfb";
-export const ColorsGray100 = "#f7fafc";
-export const ColorsGray200 = "#edf2f7";
-export const ColorsGray300 = "#e2e8f0";
-export const ColorsGray400 = "#cbd5e0";
-export const ColorsGray500 = "#a0aec0";
-export const ColorsGray600 = "#718096";
-export const ColorsGray700 = "#4a5568";
-export const ColorsGray800 = "#2d3748";
-export const ColorsGray900 = "#1a202c";
-export const ColorsRed100 = "#fff5f5";
-export const ColorsRed200 = "#fed7d7";
-export const ColorsRed300 = "#feb2b2";
-export const ColorsRed400 = "#fc8181";
-export const ColorsRed500 = "#f56565";
-export const ColorsRed600 = "#e53e3e";
-export const ColorsRed700 = "#c53030";
-export const ColorsRed800 = "#9b2c2c";
-export const ColorsRed900 = "#742a2a";
-export const ColorsOrange100 = "#fffaf0";
-export const ColorsOrange200 = "#feebc8";
-export const ColorsOrange300 = "#fbd38d";
-export const ColorsOrange400 = "#f6ad55";
-export const ColorsOrange500 = "#ed8936";
-export const ColorsOrange600 = "#dd6b20";
-export const ColorsOrange700 = "#c05621";
-export const ColorsOrange800 = "#9c4221";
-export const ColorsOrange900 = "#7b341e";
-export const ColorsYellow100 = "#fffff0";
-export const ColorsYellow200 = "#fefcbf";
-export const ColorsYellow300 = "#faf089";
-export const ColorsYellow400 = "#f6e05e";
-export const ColorsYellow500 = "#ecc94b";
-export const ColorsYellow600 = "#d69e2e";
-export const ColorsYellow700 = "#b7791f";
-export const ColorsYellow800 = "#975a16";
-export const ColorsYellow900 = "#744210";
-export const ColorsGreen100 = "#f0fff4";
-export const ColorsGreen200 = "#c6f6d5";
-export const ColorsGreen300 = "#9ae6b4";
-export const ColorsGreen400 = "#68d391";
-export const ColorsGreen500 = "#48bb78";
-export const ColorsGreen600 = "#38a169";
-export const ColorsGreen700 = "#2f855a";
-export const ColorsGreen800 = "#276749";
-export const ColorsGreen900 = "#22543d";
-export const ColorsTeal100 = "#e6fffa";
-export const ColorsTeal200 = "#b2f5ea";
-export const ColorsTeal300 = "#81e6d9";
-export const ColorsTeal400 = "#4fd1c5";
-export const ColorsTeal500 = "#38b2ac";
-export const ColorsTeal600 = "#319795";
-export const ColorsTeal700 = "#2c7a7b";
-export const ColorsTeal800 = "#285e61";
-export const ColorsTeal900 = "#234e52";
-export const ColorsBlue100 = "#ebf8ff";
-export const ColorsBlue200 = "#bee3f8";
-export const ColorsBlue300 = "#90cdf4";
-export const ColorsBlue400 = "#63b3ed";
-export const ColorsBlue500 = "#4299e1";
-export const ColorsBlue600 = "#3182ce";
-export const ColorsBlue700 = "#2b6cb0";
-export const ColorsBlue800 = "#2c5282";
-export const ColorsBlue900 = "#2a4365";
-export const ColorsIndigo100 = "#ebf4ff";
-export const ColorsIndigo200 = "#c3dafe";
-export const ColorsIndigo300 = "#a3bffa";
-export const ColorsIndigo400 = "#7f9cf5";
-export const ColorsIndigo500 = "#667eea";
-export const ColorsIndigo600 = "#5a67d8";
-export const ColorsIndigo700 = "#4c51bf";
-export const ColorsIndigo800 = "#434190";
-export const ColorsIndigo900 = "#3c366b";
-export const ColorsPurple100 = "#faf5ff";
-export const ColorsPurple200 = "#e9d8fd";
-export const ColorsPurple300 = "#d6bcfa";
-export const ColorsPurple400 = "#b794f4";
-export const ColorsPurple500 = "#9f7aea";
-export const ColorsPurple600 = "#805ad5";
-export const ColorsPurple700 = "#6b46c1";
-export const ColorsPurple800 = "#553c9a";
-export const ColorsPurple900 = "#44337a";
-export const ColorsPink100 = "#fff5f7";
-export const ColorsPink200 = "#fed7e2";
-export const ColorsPink300 = "#fbb6ce";
-export const ColorsPink400 = "#f687b3";
-export const ColorsPink500 = "#ed64a6";
-export const ColorsPink600 = "#d53f8c";
-export const ColorsPink700 = "#b83280";
-export const ColorsPink800 = "#97266d";
-export const ColorsPink900 = "#702459";
-export const OpacityLow = "10%";
-export const OpacityMd = "50%";
-export const OpacityHigh = "90%";
-export const FontFamiliesHeading = "Inter";
-export const FontFamiliesBody = "Roboto";
-export const LineHeightsHeading = "110%";
-export const LineHeightsBody = "140%";
-export const LetterSpacingDefault = "0";
-export const LetterSpacingIncreased = "150%";
-export const LetterSpacingDecreased = "-5%";
-export const ParagraphSpacingH1 = "32";
-export const ParagraphSpacingH2 = "26";
-export const FontWeightsHeadingRegular = "Regular";
-export const FontWeightsHeadingBold = "Bold";
-export const FontWeightsBodyRegular = "Regular";
-export const FontWeightsBodyBold = "Bold";
-export const FontSizesH1 = "roundTo(16*1.25^5)";
-export const FontSizesH2 = "roundTo(16*1.25^4)";
-export const FontSizesH3 = "roundTo(16*1.25^3)";
-export const FontSizesH4 = "roundTo(16*1.25^2)";
-export const FontSizesH5 = "roundTo(16*1.25^1)";
-export const FontSizesH6 = "16";
-export const FontSizesBody = "16";
-export const FontSizesSm = "16 * 0.85";
-export const FontSizesXs = "16 * 0.65";
-export const H1 = {
-  fontFamily: "SF Pro Rounded",
-  fontWeight: "Bold",
-  fontSize: "roundTo(16*1.25^5)",
-  lineHeight: "110%",
-  letterSpacing: "0",
-};
-export const H2 = {
-  fontFamily: "SF Pro Rounded",
-  fontWeight: "Bold",
-  fontSize: "roundTo(16*1.25^4)",
-  lineHeight: "110%",
-  letterSpacing: "0",
-  paragraphSpacing: "26",
-};
-export const Sf = "SF Pro Rounded";
-export const H3 = {
-  fontFamily: "SF Pro Rounded",
-  fontWeight: "Bold",
-  fontSize: "roundTo(16*1.25^3)",
-  lineHeight: "110%",
-  letterSpacing: "0",
-};
-export const H4 = {
-  fontFamily: "SF Pro Rounded",
-  fontWeight: "Regular",
-  fontSize: "roundTo(16*1.25^2)",
-  lineHeight: "110%",
-};
-export const H5 = {
-  fontFamily: "SF Pro Rounded",
-  fontWeight: "Regular",
-  fontSize: "roundTo(16*1.25^1)",
-  lineHeight: "110%",
-};
-export const H6 = {
-  fontFamily: "SF Pro Rounded",
-  fontWeight: "Regular",
-  fontSize: "16",
-  lineHeight: "110%",
-};
-export const Body = {
-  fontFamily: "SF Pro Rounded",
-  fontWeight: "Regular",
-  fontSize: "16",
-  lineHeight: "140%",
-};
-export const FgDefault = "#fbfbfb";
-export const FgMuted = "#e2e8f0";
-export const FgSubtle = "#a0aec0";
-export const BgDefault = "#1a202c";
-export const BgMuted = "#4a5568";
-export const BgSubtle = "#718096";
-export const AccentDefault = "#5a67d8";
-export const AccentOnAccent = "#fbfbfb";
-export const AccentBg = "#434190";
-export const ShadowsDefault = "rgba(#000000, 0.3)";
-export const ButtonPrimaryBackground = "#5a67d8";
-export const ButtonPrimaryText = "#fbfbfb";
-export const ButtonBorderRadius = "8";
-export const ButtonBorderWidth = "4rem * 2rem";
-export const CardBorderRadius = "8";
-export const CardBackground = "#1a202c";
-export const CardPadding = "4rem * 2rem * 2rem";
-export const BoxShadowDefault = [
-  {
-    x: 5,
-    y: 5,
-    spread: 3,
-    color: "rgba(rgba(#000000, 0.3), 0.15)",
-    blur: 5,
-    $type: "dropShadow",
+export default {
+  "dimension": {
+    "scale": "2rem",
+    "xs": "4rem",
+    "sm": "4rem * 2rem",
+    "md": "4rem * 2rem * 2rem",
+    "lg": "4rem * 2rem * 2rem * 2rem",
+    "xl": "4rem * 2rem * 2rem * 2rem * 2rem"
   },
-  { x: 4, y: 4, spread: 6, color: "#00000033", blur: 5, $type: "innerShadow" },
-];
-export const TypographyH1Bold = {
-  fontFamily: "Inter",
-  fontWeight: "Bold",
-  lineHeight: "110%",
-  fontSize: "roundTo(16*1.25^5)",
-  paragraphSpacing: "32",
-  letterSpacing: "-5%",
-};
-export const TypographyH1Regular = {
-  fontFamily: "Inter",
-  fontWeight: "Regular",
-  lineHeight: "110%",
-  fontSize: "roundTo(16*1.25^5)",
-  paragraphSpacing: "32",
-  letterSpacing: "-5%",
-};
-export const TypographyH2Bold = {
-  fontFamily: "Inter",
-  fontWeight: "Bold",
-  lineHeight: "110%",
-  fontSize: "roundTo(16*1.25^4)",
-  paragraphSpacing: "26",
-  letterSpacing: "-5%",
-};
-export const TypographyH2Regular = {
-  fontFamily: "Inter",
-  fontWeight: "Regular",
-  lineHeight: "110%",
-  fontSize: "roundTo(16*1.25^4)",
-  paragraphSpacing: "26",
-  letterSpacing: "-5%",
-};
-export const TypographyBody = {
-  fontFamily: "Roboto",
-  fontWeight: "Regular",
-  lineHeight: "110%",
-  fontSize: "16",
-  paragraphSpacing: "26",
+  "spacing": {
+    "xs": "4rem",
+    "sm": "4rem * 2rem",
+    "md": "4rem * 2rem * 2rem",
+    "lg": "4rem * 2rem * 2rem * 2rem",
+    "xl": "4rem * 2rem * 2rem * 2rem * 2rem",
+    "multi-value": "4rem * 2rem 4rem * 2rem * 2rem * 2rem * 2rem"
+  },
+  "borderRadius": {
+    "sm": "4",
+    "lg": "8",
+    "xl": "16",
+    "multi-value": "4 8"
+  },
+  "colors": {
+    "black": "#000000",
+    "white": "#fbfbfb",
+    "gray": {
+      "100": "#f7fafc",
+      "200": "#edf2f7",
+      "300": "#e2e8f0",
+      "400": "#cbd5e0",
+      "500": "#a0aec0",
+      "600": "#718096",
+      "700": "#4a5568",
+      "800": "#2d3748",
+      "900": "#1a202c"
+    },
+    "red": {
+      "100": "#fff5f5",
+      "200": "#fed7d7",
+      "300": "#feb2b2",
+      "400": "#fc8181",
+      "500": "#f56565",
+      "600": "#e53e3e",
+      "700": "#c53030",
+      "800": "#9b2c2c",
+      "900": "#742a2a"
+    },
+    "orange": {
+      "100": "#fffaf0",
+      "200": "#feebc8",
+      "300": "#fbd38d",
+      "400": "#f6ad55",
+      "500": "#ed8936",
+      "600": "#dd6b20",
+      "700": "#c05621",
+      "800": "#9c4221",
+      "900": "#7b341e"
+    },
+    "yellow": {
+      "100": "#fffff0",
+      "200": "#fefcbf",
+      "300": "#faf089",
+      "400": "#f6e05e",
+      "500": "#ecc94b",
+      "600": "#d69e2e",
+      "700": "#b7791f",
+      "800": "#975a16",
+      "900": "#744210"
+    },
+    "green": {
+      "100": "#f0fff4",
+      "200": "#c6f6d5",
+      "300": "#9ae6b4",
+      "400": "#68d391",
+      "500": "#48bb78",
+      "600": "#38a169",
+      "700": "#2f855a",
+      "800": "#276749",
+      "900": "#22543d"
+    },
+    "teal": {
+      "100": "#e6fffa",
+      "200": "#b2f5ea",
+      "300": "#81e6d9",
+      "400": "#4fd1c5",
+      "500": "#38b2ac",
+      "600": "#319795",
+      "700": "#2c7a7b",
+      "800": "#285e61",
+      "900": "#234e52"
+    },
+    "blue": {
+      "100": "#ebf8ff",
+      "200": "#bee3f8",
+      "300": "#90cdf4",
+      "400": "#63b3ed",
+      "500": "#4299e1",
+      "600": "#3182ce",
+      "700": "#2b6cb0",
+      "800": "#2c5282",
+      "900": "#2a4365"
+    },
+    "indigo": {
+      "100": "#ebf4ff",
+      "200": "#c3dafe",
+      "300": "#a3bffa",
+      "400": "#7f9cf5",
+      "500": "#667eea",
+      "600": "#5a67d8",
+      "700": "#4c51bf",
+      "800": "#434190",
+      "900": "#3c366b"
+    },
+    "purple": {
+      "100": "#faf5ff",
+      "200": "#e9d8fd",
+      "300": "#d6bcfa",
+      "400": "#b794f4",
+      "500": "#9f7aea",
+      "600": "#805ad5",
+      "700": "#6b46c1",
+      "800": "#553c9a",
+      "900": "#44337a"
+    },
+    "pink": {
+      "100": "#fff5f7",
+      "200": "#fed7e2",
+      "300": "#fbb6ce",
+      "400": "#f687b3",
+      "500": "#ed64a6",
+      "600": "#d53f8c",
+      "700": "#b83280",
+      "800": "#97266d",
+      "900": "#702459"
+    }
+  },
+  "opacity": {
+    "low": "10%",
+    "md": "50%",
+    "high": "90%"
+  },
+  "fontFamilies": {
+    "heading": "Inter",
+    "body": "Roboto"
+  },
+  "lineHeights": {
+    "heading": "110%",
+    "body": "140%"
+  },
+  "letterSpacing": {
+    "default": "0",
+    "increased": "150%",
+    "decreased": "-5%"
+  },
+  "paragraphSpacing": {
+    "h1": "32",
+    "h2": "26"
+  },
+  "fontWeights": {
+    "headingRegular": "Regular",
+    "headingBold": "Bold",
+    "bodyRegular": "Regular",
+    "bodyBold": "Bold"
+  },
+  "fontSizes": {
+    "h1": "roundTo(16*1.25^5)",
+    "h2": "roundTo(16*1.25^4)",
+    "h3": "roundTo(16*1.25^3)",
+    "h4": "roundTo(16*1.25^2)",
+    "h5": "roundTo(16*1.25^1)",
+    "h6": "16",
+    "body": "16",
+    "sm": "16 * 0.85",
+    "xs": "16 * 0.65"
+  },
+  "h1": {
+    "fontFamily": "SF Pro Rounded",
+    "fontWeight": "Bold",
+    "fontSize": "roundTo(16*1.25^5)",
+    "lineHeight": "110%",
+    "letterSpacing": "0"
+  },
+  "h2": {
+    "fontFamily": "SF Pro Rounded",
+    "fontWeight": "Bold",
+    "fontSize": "roundTo(16*1.25^4)",
+    "lineHeight": "110%",
+    "letterSpacing": "0",
+    "paragraphSpacing": "26"
+  },
+  "SF": "SF Pro Rounded",
+  "h3": {
+    "fontFamily": "SF Pro Rounded",
+    "fontWeight": "Bold",
+    "fontSize": "roundTo(16*1.25^3)",
+    "lineHeight": "110%",
+    "letterSpacing": "0"
+  },
+  "h4": {
+    "fontFamily": "SF Pro Rounded",
+    "fontWeight": "Regular",
+    "fontSize": "roundTo(16*1.25^2)",
+    "lineHeight": "110%"
+  },
+  "h5": {
+    "fontFamily": "SF Pro Rounded",
+    "fontWeight": "Regular",
+    "fontSize": "roundTo(16*1.25^1)",
+    "lineHeight": "110%"
+  },
+  "h6": {
+    "fontFamily": "SF Pro Rounded",
+    "fontWeight": "Regular",
+    "fontSize": "16",
+    "lineHeight": "110%"
+  },
+  "body": {
+    "fontFamily": "SF Pro Rounded",
+    "fontWeight": "Regular",
+    "fontSize": "16",
+    "lineHeight": "140%"
+  },
+  "fg": {
+    "default": "#fbfbfb",
+    "muted": "#e2e8f0",
+    "subtle": "#a0aec0"
+  },
+  "bg": {
+    "default": "#1a202c",
+    "muted": "#4a5568",
+    "subtle": "#718096"
+  },
+  "accent": {
+    "default": "#5a67d8",
+    "onAccent": "#fbfbfb",
+    "bg": "#434190"
+  },
+  "shadows": {
+    "default": "rgba(#000000, 0.3)"
+  },
+  "button": {
+    "primary": {
+      "background": "#5a67d8",
+      "text": "#fbfbfb"
+    },
+    "borderRadius": "8",
+    "borderWidth": "4rem * 2rem"
+  },
+  "card": {
+    "borderRadius": "8",
+    "background": "#1a202c",
+    "padding": "4rem * 2rem * 2rem"
+  },
+  "boxShadow": {
+    "default": [
+      {
+        "x": 5,
+        "y": 5,
+        "spread": 3,
+        "color": "rgba(rgba(#000000, 0.3), 0.15)",
+        "blur": 5,
+        "$type": "dropShadow"
+      },
+      {
+        "x": 4,
+        "y": 4,
+        "spread": 6,
+        "color": "#00000033",
+        "blur": 5,
+        "$type": "innerShadow"
+      }
+    ]
+  },
+  "typography": {
+    "H1": {
+      "Bold": {
+        "fontFamily": "Inter",
+        "fontWeight": "Bold",
+        "lineHeight": "110%",
+        "fontSize": "roundTo(16*1.25^5)",
+        "paragraphSpacing": "32",
+        "letterSpacing": "-5%"
+      },
+      "Regular": {
+        "fontFamily": "Inter",
+        "fontWeight": "Regular",
+        "lineHeight": "110%",
+        "fontSize": "roundTo(16*1.25^5)",
+        "paragraphSpacing": "32",
+        "letterSpacing": "-5%"
+      }
+    },
+    "H2": {
+      "Bold": {
+        "fontFamily": "Inter",
+        "fontWeight": "Bold",
+        "lineHeight": "110%",
+        "fontSize": "roundTo(16*1.25^4)",
+        "paragraphSpacing": "26",
+        "letterSpacing": "-5%"
+      },
+      "Regular": {
+        "fontFamily": "Inter",
+        "fontWeight": "Regular",
+        "lineHeight": "110%",
+        "fontSize": "roundTo(16*1.25^4)",
+        "paragraphSpacing": "26",
+        "letterSpacing": "-5%"
+      }
+    },
+    "Body": {
+      "fontFamily": "Roboto",
+      "fontWeight": "Regular",
+      "lineHeight": "110%",
+      "fontSize": "16",
+      "paragraphSpacing": "26"
+    }
+  }
 };
