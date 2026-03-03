@@ -28,7 +28,17 @@ import dark from 'design-tokens/dark';
 
 ```bash
 npm config set @sua-org:registry https://npm.pkg.github.com
-npm install @sua-org/design-tokens
+npm install @leoopardo/design-tokens
+```
+
+## Instalando o pacote no seu projeto
+
+```bash
+npm install @leoopardo/design-tokens
+```
+
+```bash
+yarn add @leoopardo/design-tokens
 ```
 
 ## CI
