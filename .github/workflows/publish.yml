@@ -92,13 +92,13 @@ jobs:
             return;
           }
 
-          const custom = 'Nova versão de design-tokens publicada 🚀. Lembrem-se de manter os projetos atualizados!';
+          const custom = '___________________________________________________ \n Nova versão de design-tokens publicada 🚀. Lembrem-se de manter os projetos atualizados!';
           const pkgName = process.env.PACKAGE_NAME;
           const pkgVersion = process.env.PACKAGE_VERSION;
           const repo = process.env.GITHUB_REPOSITORY;
           const runId = process.env.GITHUB_RUN_ID;
           const sha = (process.env.GITHUB_SHA || '').slice(0, 7);
-          const packageUrl = `https://github.com/${repo}/pkgs/npm/${pkgName}}`;
+          const packageUrl = `https://github.com/${repo}/packages`;
           const runUrl = `https://github.com/${repo}/actions/runs/${runId}`;
 
           const payload = {
