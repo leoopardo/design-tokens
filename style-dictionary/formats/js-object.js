@@ -18,6 +18,8 @@ const jsObjectFormatter = ({ dictionary, file, platform }) => {
       });
     });
 
+    convertTypographySizesToRem(output);
+
     const js = `export default ${JSON.stringify(output, null, 2)};\n`;
 
     const dts = `declare const tokens: ${toDts(output)};
@@ -41,6 +43,73 @@ export default tokens;
 export default {
   jsObjectFormatter,
 };
+
+function convertTypographySizesToRem(obj) {
+  if (!obj || typeof obj !== "object") {
+    return;
+  }
+
+  Object.entries(obj).forEach(([key, value]) => {
+    if (key === "fontSizes" && value && typeof value === "object") {
+      Object.keys(value).forEach((sizeKey) => {
+        value[sizeKey] = expressionToRem(value[sizeKey]);
+      });
+      return;
+    }
+
+    if (key === "fontSize") {
+      obj[key] = expressionToRem(value);
+      return;
+    }
+
+    if (value && typeof value === "object") {
+      convertTypographySizesToRem(value);
+    }
+  });
+}
+
+function expressionToRem(value) {
+  if (typeof value !== "string") {
+    return value;
+  }
+
+  const raw = value.trim();
+  if (!raw) {
+    return value;
+  }
+
+  if (/^-?\d+(\.\d+)?rem$/i.test(raw)) {
+    return `${stripTrailingZeros(Number.parseFloat(raw))}rem`;
+  }
+
+  if (/^-?\d+(\.\d+)?px$/i.test(raw)) {
+    const px = Number.parseFloat(raw);
+    return `${stripTrailingZeros(px / 16)}rem`;
+  }
+
+  const expr = raw
+    .replace(/\broundTo\s*\(/g, "Math.round(")
+    .replace(/\^/g, "**");
+
+  const sanitized = expr.replace(/Math\.round/g, "");
+  if (!/^[\d\s+\-*/().,]*$/.test(sanitized)) {
+    return value;
+  }
+
+  try {
+    const result = Function(`"use strict"; return (${expr});`)();
+    if (typeof result !== "number" || !Number.isFinite(result)) {
+      return value;
+    }
+    return `${stripTrailingZeros(result / 16)}rem`;
+  } catch {
+    return value;
+  }
+}
+
+function stripTrailingZeros(num) {
+  return Number(num.toFixed(4)).toString();
+}
 
 function toDts(obj, indent = 2) {
   if (Array.isArray(obj)) {

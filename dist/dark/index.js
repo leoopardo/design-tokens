@@ -23,7 +23,7 @@ export default {
   },
   "colors": {
     "black": "#000000",
-    "white": "#fbfbfb",
+    "white": "#ffffff",
     "gray": {
       "100": "#f7fafc",
       "200": "#edf2f7",
@@ -164,27 +164,27 @@ export default {
     "bodyBold": "Bold"
   },
   "fontSizes": {
-    "h1": "roundTo(16*1.25^5)",
-    "h2": "roundTo(16*1.25^4)",
-    "h3": "roundTo(16*1.25^3)",
-    "h4": "roundTo(16*1.25^2)",
-    "h5": "roundTo(16*1.25^1)",
-    "h6": "16",
-    "body": "16",
-    "sm": "16 * 0.85",
-    "xs": "16 * 0.65"
+    "h1": "3.0625rem",
+    "h2": "2.4375rem",
+    "h3": "1.9375rem",
+    "h4": "1.5625rem",
+    "h5": "1.25rem",
+    "h6": "1rem",
+    "body": "1rem",
+    "sm": "0.85rem",
+    "xs": "0.65rem"
   },
   "h1": {
     "fontFamily": "SF Pro Rounded",
     "fontWeight": "Bold",
-    "fontSize": "roundTo(16*1.25^5)",
+    "fontSize": "3.0625rem",
     "lineHeight": "110%",
     "letterSpacing": "0"
   },
   "h2": {
     "fontFamily": "SF Pro Rounded",
     "fontWeight": "Bold",
-    "fontSize": "roundTo(16*1.25^4)",
+    "fontSize": "2.4375rem",
     "lineHeight": "110%",
     "letterSpacing": "0",
     "paragraphSpacing": "26"
@@ -193,36 +193,36 @@ export default {
   "h3": {
     "fontFamily": "SF Pro Rounded",
     "fontWeight": "Bold",
-    "fontSize": "roundTo(16*1.25^3)",
+    "fontSize": "1.9375rem",
     "lineHeight": "110%",
     "letterSpacing": "0"
   },
   "h4": {
     "fontFamily": "SF Pro Rounded",
     "fontWeight": "Regular",
-    "fontSize": "roundTo(16*1.25^2)",
+    "fontSize": "1.5625rem",
     "lineHeight": "110%"
   },
   "h5": {
     "fontFamily": "SF Pro Rounded",
     "fontWeight": "Regular",
-    "fontSize": "roundTo(16*1.25^1)",
+    "fontSize": "1.25rem",
     "lineHeight": "110%"
   },
   "h6": {
     "fontFamily": "SF Pro Rounded",
     "fontWeight": "Regular",
-    "fontSize": "16",
+    "fontSize": "1rem",
     "lineHeight": "110%"
   },
   "body": {
     "fontFamily": "SF Pro Rounded",
     "fontWeight": "Regular",
-    "fontSize": "16",
+    "fontSize": "1rem",
     "lineHeight": "140%"
   },
   "fg": {
-    "default": "#fbfbfb",
+    "default": "#ffffff",
     "muted": "#e2e8f0",
     "subtle": "#a0aec0"
   },
@@ -233,7 +233,7 @@ export default {
   },
   "accent": {
     "default": "#5a67d8",
-    "onAccent": "#fbfbfb",
+    "onAccent": "#ffffff",
     "bg": "#434190"
   },
   "shadows": {
@@ -242,7 +242,7 @@ export default {
   "button": {
     "primary": {
       "background": "#5a67d8",
-      "text": "#fbfbfb"
+      "text": "#ffffff"
     },
     "borderRadius": "8",
     "borderWidth": "4rem * 2rem"
@@ -278,7 +278,7 @@ export default {
         "fontFamily": "Inter",
         "fontWeight": "Bold",
         "lineHeight": "110%",
-        "fontSize": "roundTo(16*1.25^5)",
+        "fontSize": "3.0625rem",
         "paragraphSpacing": "32",
         "letterSpacing": "-5%"
       },
@@ -286,7 +286,7 @@ export default {
         "fontFamily": "Inter",
         "fontWeight": "Regular",
         "lineHeight": "110%",
-        "fontSize": "roundTo(16*1.25^5)",
+        "fontSize": "3.0625rem",
         "paragraphSpacing": "32",
         "letterSpacing": "-5%"
       }
@@ -296,7 +296,7 @@ export default {
         "fontFamily": "Inter",
         "fontWeight": "Bold",
         "lineHeight": "110%",
-        "fontSize": "roundTo(16*1.25^4)",
+        "fontSize": "2.4375rem",
         "paragraphSpacing": "26",
         "letterSpacing": "-5%"
       },
@@ -304,7 +304,7 @@ export default {
         "fontFamily": "Inter",
         "fontWeight": "Regular",
         "lineHeight": "110%",
-        "fontSize": "roundTo(16*1.25^4)",
+        "fontSize": "2.4375rem",
         "paragraphSpacing": "26",
         "letterSpacing": "-5%"
       }
@@ -313,7 +313,7 @@ export default {
       "fontFamily": "Roboto",
       "fontWeight": "Regular",
       "lineHeight": "110%",
-      "fontSize": "16",
+      "fontSize": "1rem",
       "paragraphSpacing": "26"
     }
   }
