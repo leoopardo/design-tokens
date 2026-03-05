@@ -10,7 +10,7 @@ permissions:
 
 concurrency:
   group: normalize-main
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   normalize:
