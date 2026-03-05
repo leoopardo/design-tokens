@@ -34,11 +34,13 @@
     },
     "onAccent": {
       "$type": "color",
-      "$value": "{colors.white}"
+      "$value": "{colors.white}",
+      "$description": "teste"
     },
     "bg": {
       "$type": "color",
-      "$value": "{colors.indigo.200}"
+      "$value": "{colors.indigo.200}",
+      "$description": "teste"
     }
   },
   "shadows": {
