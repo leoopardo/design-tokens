@@ -34,7 +34,8 @@
     },
     "onAccent": {
       "$type": "color",
-      "$value": "{colors.white}"
+      "$value": "{colors.white}",
+      "$description": "teste"
     },
     "bg": {
       "$type": "color",
