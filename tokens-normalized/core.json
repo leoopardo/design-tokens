@@ -256,7 +256,8 @@
       },
       "600": {
         "$type": "color",
-        "$value": "#38a169"
+        "$value": "#38a169",
+        "$description": "primary"
       },
       "700": {
         "$type": "color",
